@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.BusOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.3" prefHeight="300.0" prefWidth="600.0" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableBus" layoutX="-12.0" layoutY="35.0" prefHeight="369.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="columnBusPlate" prefWidth="75.0" text="Bus" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background" stylesheets="@application.css">
+               <children>
+                  <GridPane stylesheets="@application.css" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label text="License Plate" />
+                        <Label text="Class rate" GridPane.rowIndex="1" />
+                        <Label text="Model" GridPane.rowIndex="2" />
+                        <Label text="Seats Number" GridPane.rowIndex="3" />
+                        <Label text="Milege" GridPane.rowIndex="4" />
+                        <Label text="Serial Number" GridPane.rowIndex="5" />
+                        <Label text="Bought date" GridPane.rowIndex="6" />
+                        <Label fx:id="labelPlate" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="labelBoughtDate" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="labelSerialNumber" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelMileage" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelSeats" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="LabelModel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelCategory" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Label layoutY="6.0" text="Bus details:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                  <ToolBar layoutX="227.0" layoutY="320.0" styleClass="background" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                     <items>
+                        <Button mnemonicParsing="false" onAction="#handleNewBus" text="New..." />
+                        <Button mnemonicParsing="false" onAction="#handleEditBus" text="Edit..." />
+                        <Button mnemonicParsing="false" onAction="#handleDeleteBus" text="Delete" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
